@@ -5,85 +5,14 @@
 	<title></title>
 </head>
 <body>
-
- </style>
-<link rel="stylesheet" href="chatbot.css">
-<!-- FingerPrint JS -->
-<script src="fp2.js"></script>
-<!-- ChatBot JS -->
-<script src="chatbot.js"></script>
-<!-- ChatBot JS (для поддержки всех используемых в настоящее время браузеров) -->
-<!-- <script src="./chatbot/chatbot_es5.js"></script> -->
+<style>
+body{
+	font: italic 1.2em "Fira Sans", serif;
+}
+</style>
 </head>
 
 <body>
-   
-  
-  <h1>Simple Chatbot on pure JavaScript by Itchief (get JSON from URL)</h1>
-  <!-- chatbot-btn -->
-<div class="chatbot-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" width="20" height="20"><path fill="currentColor" d="M14 8.999v-5a2.003 2.003 0 00-2-2H3a2.003 2.003 0 00-2 2v5a2.003 2.003 0 002 2v1.694a.302.302 0 00.486.244l2.587-1.945H12A1.997 1.997 0 0014 9zm3-2h-2v2a3.003 3.003 0 01-3 3H7v2a2.003 2.003 0 002 2h3.927l2.59 1.941c.198.15.483.004.483-.243v-1.701h1a2.003 2.003 0 002-1.997v-5a2.003 2.003 0 00-2-2z" /></svg>
-    <div class="chatbot-toggle-tooltip">Вопросы?</div>
-  </div>
-
-  <script>
-// 1 - Указание ключа в localstorage, в котором будет храниться отпечаток браузера
-const keyLS = 'fingerprint';
-// 2 - Указание CSS селектора кнопки, с помощью которой будем вызывать окно диалога с чат-ботом
-const chatbotBtnSel = '.chatbot-btn';
-// 3 - URL к chatbot.php
-const url = '/chatbot/chatbot.php';
-// 4 - Описание данных, определяющие сценарий диалога для чат-бота
-const data = { 
-    
-    bot: {
-    0: {
-      content: 'Привет! Я Виктор, бот програмист.', human: [0, 1, 2]
-    },
-    1: { content: 'Как мне к вам обращатся?', human: [3] },
-    2: { content: 'И вам привет, как мне к вам обращатся?', human: [3] },
-    3: { content: '{{name}}, что вас интересует?', human: [4, 5, 11] },
-    4: { content: '{{name}}, для этого перейдите на <a href="https://maubzp.com" target="_blank">цю сторінку</a>.', human: [6] },
-    5: { content: "{{name}}, яке у Вас питання?", human: [7] },
-    6: { content: '{{name}}, Спасибо за отзыв, ответ мы вам сможем отправить на?', human: [8, 9] },
-    7: { content: '{{name}}, По номеру телефона', human: [10] },
-    8: { content: '{{name}}, На електронную почту', human: [10] },
-    9: { content: 'Готово! {{name}},мы вас скоро ответим вам {{contact}}. Хорошого дня!', human: [6] },
-    11: { content: '<img src="1.PNG">', human: [6] },
-    12: { content: '<img src="2.PNG">', human: [6] },
-  },
-  human: {
-    0: { content: 'Привет', bot: 1 },
-    1: { content: 'Привет Виктор!', bot: 2 },
-    2: { content: 'Приветик, мауб-бот!', bot: 2 },
-    3: { content: '', bot: 3, name: 'name' },
-    4: { content: 'Подскажи как мне написть функцию', bot: 11 },
-    5: { content: 'Хочу оставить отзыв.', bot: 5 },
-    6: { content: 'В начало', bot: 3 },
-    7: { content: '', bot: 6, name: '' },
-    8: { content: 'за телефоном', bot: 7 },
-    9: { content: 'по email', bot: 8 },
-    10: { content: '', bot: 9, name: 'contact' },
-    11: { content: 'Пример массива', bot: 12 },
-  }
-    };
-// добавление хэша fingerprint в localstorage
-let fingerprint = localStorage.getItem(keyLS);
-if (!fingerprint) {
-  Fingerprint2.get(function (components) {
-    fingerprint = Fingerprint2.x64hash128(components.map(function (pair) { return pair.value }).join(), 31)
-    localStorage.setItem(keyLS, fingerprint)
-  });
-}
-// инициализация ChatBotByItchief посредством вызова следующей функции с передачи ей нужных параметров
-chatBotByItchiefInit({
-  chatbotBtnSel: chatbotBtnSel,
-  data: data,
-  url: url,
-  keyLS: keyLS
-});
-
-
-
-</script>
+<h1>Hell Git uesrs</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor euismod lacinia. Pellentesque ut efficitur nibh. Donec in dictum mi. Nulla nec felis ac nulla pellentesque cursus. Donec et sapien lorem. Vivamus ut mattis mi. Proin et fermentum ante. Morbi at laoreet lorem. Nullam sagittis ex nec diam tristique molestie. Pellentesque aliquet arcu et malesuada hendrerit. Sed pretium quam in nisi fringilla accumsan. Suspendisse massa orci, auctor at risus eu, hendrerit commodo est.</p>
 </html>
